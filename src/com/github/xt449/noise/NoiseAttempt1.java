@@ -11,7 +11,7 @@ import java.io.IOException;
  */
 public class NoiseAttempt1 {
 
-	private static final int IMG_SIZE = 1000; // this only controls the resolution of the image
+	private static final int IMG_SIZE = 100; // this only controls the resolution of the image
 
 	private static final double[][] sourcesWrapEdge = new double[IMG_SIZE + 1][IMG_SIZE + 1];
 
@@ -83,6 +83,6 @@ public class NoiseAttempt1 {
 			}
 		}
 
-		ImageIO.write(image, "png", new File("attemp1.png"));
+		ImageIO.write(image, "png", new File("attempt1.png"));
 	}
 }
