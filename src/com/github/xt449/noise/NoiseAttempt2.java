@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.Random;
 
 /**
- * @author Jonathan Talcott (xt449/BinaryBanana)
+ * @author Jonathan Talcott (xt449 / BinaryBanana)
  */
 public class NoiseAttempt2 {
 
@@ -22,22 +22,26 @@ public class NoiseAttempt2 {
 	private static void generateVectors() {
 		for(int y = 0; y < vectors.length; y++) {
 			for(int x = 0; x < vectors.length; x++) {
+				// Trig Random Source
 //				vectors[x][y] = new Point2D.Float(
-//						// (-1.0,1.0)
 //						(float) Math.tanh(random.nextFloat() * Math.PI),
 //						(float) Math.tanh(random.nextFloat() * Math.PI)
 //				);
 
+				// Signed Random Source
 //				vectors[x][y] = new Point2D.Float(
-//						// (-1.0,1.0)
 //						(random.nextBoolean() ? -random.nextFloat() : random.nextFloat()) / 2,
 //						(random.nextBoolean() ? -random.nextFloat() : random.nextFloat()) / 2
 //				);
 
-				vectors[x][y] = new Point2D.Float((float) (random.nextGaussian() % 1) / 2, (float) (random.nextGaussian() % 1) / 2);
+				// Gaussian Source
+				vectors[x][y] = new Point2D.Float(
+						(float) (random.nextGaussian() % 1) / 2,
+						(float) (random.nextGaussian() % 1) / 2
+				);
 
+				// Dot Random Source
 //				vectors[x][y] = new Point2D.Float(
-//						// (-1.0,1.0)
 //						dot(random.nextFloat(), random.nextFloat(), random.nextFloat(), random.nextFloat()),
 //						dot(random.nextFloat(), random.nextFloat(), random.nextFloat(), random.nextFloat())
 //				);
